@@ -1,0 +1,337 @@
+.Container_Admin {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 30px;
+}
+.Container_Admin > h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.Top_Admin {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.Left_Admin {
+  width: 400px;
+  height: 350px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background: rgb(192, 55, 55);
+  /* background-color: rgb(190, 190, 190); */
+}
+.Left_Admin > button {
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+  background-color: rgb(0, 189, 0);
+}
+.Sel_Box {
+  width: 100%;
+  height: 35px;
+  border-radius: 15px;
+  display: flex;
+  color: rgb(110, 110, 110);
+  font-size: 18px;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  border: none;
+  text-indent: 8px;
+  background-color: rgb(255, 255, 255);
+}
+.Sel_Box input {
+  width: 100%;
+  height: 40px;
+  text-indent: 8px;
+  font-size: 18px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+.Sel_Box button {
+  width: 65px;
+  height: 38px;
+  text-indent: 8px;
+  font-size: 18px;
+  border-radius: 15px;
+  border: none;
+}
+
+.Sel_Col {
+  width: 100%;
+  height: 35px;
+  border-radius: 15px;
+
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  text-indent: 8px;
+  background-color: rgb(190, 190, 190);
+}
+.Sel_Col input {
+  width: 100%;
+  height: 35px;
+  text-indent: 8px;
+  font-size: 18px;
+  border-radius: 15px 0 0 15px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+.Sel_Col button {
+  width: 60px;
+  height: 40px;
+  background-color: rgb(0, 182, 0);
+  text-indent: 8px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 0 15px 15px 0;
+
+  border: none;
+}
+
+.Main_Admin {
+  width: 300px;
+  height: 350px;
+  border-radius: 15px;
+  background-color: rgb(190, 190, 190);
+}
+.Right_Admin {
+  /* width: 752px; */
+  border-radius: 15px;
+  height: 350px;
+  position: relative;
+  overflow-x: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.Right_Admin::-webkit-scrollbar{
+  display: none;
+}
+
+.Sel_Price {
+  width: 100%;
+  height: 35px;
+  border-radius: 15px;
+  display: flex;
+  color: rgb(110, 110, 110);
+  font-size: 18px;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  border: none;
+  text-indent: 8px;
+  background-color: rgb(255, 255, 255);
+}
+.Sel_Price input:nth-child(1) {
+  width: 100%;
+  height: 40px;
+  text-indent: 8px;
+  font-size: 18px;
+  border: none;
+  border-right: 1px solid gray;
+  border-radius: 15px 0 0 15px;
+  outline: none;
+}
+.Sel_Price input:nth-child(2) {
+  width: 100%;
+  height: 40px;
+  text-indent: 8px;
+  font-size: 18px;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  outline: none;
+}
+
+.product_container_Admin {
+  width: 100%;
+  margin-top: 40px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 42px;
+}
+
+.product_item_Admin {
+  width: 270px;
+  height: 380px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+.pro_img {
+  height: 176px;
+  width: 100%;
+  object-fit: contain;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  cursor: pointer;
+}
+.pro_title_Admin {
+  font-weight: 500;
+  font-size: 17px;
+}
+.del_price_Admin {
+  color: #999;
+  font-size: 14px;
+  font-weight: 500;
+}
+.pro_price_Admin {
+  font-size: 18px;
+  font-weight: 600;
+  color: #db0002;
+}
+.pro_month_Admin {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 3px 6px;
+  background-color: #ffd740;
+  border-radius: 6px;
+}
+
+.pro_box_Admin {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.pro_addCart_Admin {
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 19px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.pro_addCart_Admin svg{
+    margin-right: 5px;
+  }
+.pro_money_Admin {
+  width: 100px;
+  
+  height: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: transparent;
+  color: #db0002;
+  border: 2px solid #db0002;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.pro_heart_Admin {
+  position: absolute;
+  z-index: 2;
+  right: 5px;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+}
+.pro_stats_Admin {
+  position: absolute;
+  z-index: 2;
+  right: 5px;
+  top: 45px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+}
+
+
+.Pagination {
+  width: 100%;
+  height: 30px;
+  display: flex;
+
+  justify-content: center;
+}
+.Pagination button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(71, 71, 71);
+  border: 1px solid gray;
+
+  margin-left: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+.DeletePro{
+  position: fixed;
+  top: -50%;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 100px;
+  box-shadow: rgba(112, 112, 112, 0.24) 0px 3px 8px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 15px;
+  transition:  .3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+.DelShow{
+  top: 10%;
+  transition:  .3s;
+}
+
+.DeletePro > p{
+  font-size: 22px;
+  text-align: center;
+}
+.DeletePro > span > button{
+  padding: 3px 12px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  border-radius: 7px;
+}
+.DeletePro > span > button:nth-child(1){
+  background-color: rgb(0, 164, 0);
+}
+.DeletePro > span > button:nth-child(2){
+  background-color: #db0002;
+}
+
+.delete__shadow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  height: 100vh;
+  /* backdrop-filter: blor(4px); */
+}

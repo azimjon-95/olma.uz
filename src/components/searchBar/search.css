@@ -1,0 +1,407 @@
+
+.Box_cont {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color:rgb(255, 255, 255);
+}
+.Box_cont.Box_cont-show{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Search_Container {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.Logo_Box{
+  font-size: 45px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color);
+}
+.kotalog_Box {
+  width: 130px;
+  height: 40px;
+  border: 2px solid var(--color);
+  border-radius: 10px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+#checkbox {
+  display: none;
+}
+
+.hamburger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+.kotalog_Box:hover {
+  color: var(--color);
+  border: 2px solid var(--color);
+}
+
+.Line {
+  position: absolute;
+  width: 29px;
+}
+
+.Line-main::before,
+.Line-main::after,
+.Line-split::before,
+.Line-split::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: 3px;
+  background-color: var(--color);
+  transition: transform 0.5s;
+}
+
+.Line-main::after {
+  transform: translateY(-7px);
+}
+.Line-main::before {
+  transform: translateY(7px);
+}
+
+.Line-split::before,
+.Line-split::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: 3px;
+  background-color: var(--color);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+/* .Line-split::after{
+    transform: translateX(10px);
+} */
+
+#checkbox:checked ~ .Line-main::before {
+  transform: rotate(45deg);
+}
+#checkbox:checked ~ .Line-main::after {
+  transform: rotate(-45deg);
+}
+#checkbox:checked ~ .Line-split::before {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+#checkbox:checked ~ .Line-split::after {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.Search_Box {
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  margin: 0 15px;
+  display: flex;
+  position: relative;
+  padding: 0px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(227, 227, 227);
+}
+
+.Search_Box > input {
+  height: 35px;
+  width: 100%;
+  font-size: 19px;
+  text-indent: 12px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.Search_Box > button > svg {
+  font-size: 28px;
+}
+.Left_btn_search {
+  display: none;
+}
+
+.Right_btn_search {
+  width: 87px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 9px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--bg-dark);
+  color: #fff;
+}
+
+.Search_Menu_Box {
+  width: 300px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Menu_Box {
+  padding: 3px 5px;
+  color: #000;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+.cart_length {
+  opacity: 0;
+  padding: 0px 5px;
+  right: 20px;
+  top: -2px;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  background-color: var(--bg-dark);
+  border-radius: 50%;
+  color: #fff;
+}
+.showLeng {
+  opacity: 1;
+}
+.Menu_Box > svg {
+  font-size: 25px;
+ 
+}
+.Menu_Box > p {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.Menu_Box:hover > svg {
+  color: var(--color);
+}
+.Menu_Box:hover > p {
+  color: var(--color);
+}
+.desktopBlock {
+  display: none;
+}
+
+.searching_products_container{
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: #fff;
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 100% ;
+  padding: 0;
+  transition: all .5s ease;
+}
+
+.searching_products_container.searchOpen{
+  padding: 12px;
+  height: auto;
+  opacity: 1;
+}
+
+.search_result::-webkit-scrollbar {
+  display: none;
+}
+.Sr_box {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 8px 8px;
+  border-bottom: 1px solid rgb(208, 208, 208);
+}
+.Img_box_filter > img {
+  width: 100%;
+}
+.Sr_box > h3 {
+  color: #000;
+  margin-left: 9px;
+}
+.Img_box_filter {
+  width: 60px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.Menu {
+  width: 110px;
+  opacity: 0;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  top: 55px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} 
+.Menu__box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  gap: 16px;
+} 
+.Menu.Show {
+  opacity: 1;
+  display: block;
+} 
+
+.Menu_item {
+  font-family: 'Montserrat';
+  font-style: normal;
+  cursor: pointer;
+  font-weight: 600;
+  /* margin: 5px; */
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(66, 66, 66);
+}
+.Menu_item:hover {
+  color: var(--color)
+}
+
+.Open_close{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+
+.search_empty{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding-top: 10px;
+  color: #999;
+}
+.search_empty svg{
+  font-size: 38px;
+  color: var(--bg-py);
+}
+
+
+
+
+
+/* ----------Media--------- */
+
+@media (max-width: 1280px) {
+  .Search_Container {
+    height: 90px;
+    width: 100%;
+  }
+  .Search_Menu_Box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    box-shadow: inset 0px 11px 8px -10px rgb(223, 223, 223);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Right_btn_search {
+    display: none;
+  }
+  .Mobil_None {
+    display: none;
+  }
+  .Left_btn_search {
+    display: block;
+  }
+  .Logo_Box {
+    display: none;
+  }
+  .Search_Box {
+    width: 100%;
+    height: 50px;
+  }
+  .hamburger {
+    padding: 7px;
+  }
+  .desktopBlock {
+    display: block;
+    width: 110px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .kotalog_Box {
+    width: 40px;
+    height: 48px;
+    border: 3px solid black;
+  }
+  .kotalog_Box > h3 {
+    display: none;
+  }
+  .Left_btn_search {
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(139, 139, 139);
+  }
+  .Menu {
+    position: absolute;
+    right: 14px;
+    top: -140px;
+  } 
+}
+
+@media (max-width: 780px) {
+  .Search_Menu_Box {
+    height: 65px;
+  }
+  .Menu_Box {
+    width: 80px;
+    height: 45px;
+    color: #000;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .Menu_Box > svg {
+    font-size: 23px;
+  }
+  .Menu_Box > p {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}

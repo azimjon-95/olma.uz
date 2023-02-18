@@ -1,0 +1,122 @@
+.Container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    background-color: #0009;
+}
+
+.Box{
+    position: fixed;
+    top: 150%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color: rgb(220, 220, 220);
+    padding: 20px;
+    border-radius: 15px;
+    transition:  .3s ease-in;
+}
+.Box > h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.Logout{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.Logout > p{
+   transform: rotate(45deg);
+   cursor: pointer;
+   font-size: 38px;
+}
+.Box.show{
+    top: 50%;
+    transition:  .3s ease-in;
+}
+.Inp{
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    text-indent: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Inp > input{
+    width: 100%;
+    height: 38px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    text-indent: 10px;
+}
+
+.Inp > button{
+    width: 40px;
+    height: 38px;
+    border-radius:0 50px 50px 0;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    text-indent: 10px;
+}
+.Inp > button> svg{
+    margin-right: 19px;
+    margin-top: 3px;
+    font-size: 24px;
+}
+.Box > button{
+    width: 100%;
+    height: 40px;
+    border-radius:50px;
+    border: none;
+    margin: 15px 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgb(10, 206, 0);
+}
+.Box > span{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Box > span > p{
+    font-size: 16px;
+    color: blue;
+    cursor: pointer;
+}
+.Box > span > p:hover{
+    text-decoration: underline;
+}
+
+.Box > span > a{
+    font-size: 17px;
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+
+.error{
+    text-align: center;
+    color: red;
+}

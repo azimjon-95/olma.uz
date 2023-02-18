@@ -1,0 +1,14 @@
+.admin{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background:#eee;
+}
+.sidebar{
+    width: 70px;
+}
+.mainAdmin{
+    flex: 1;
+    min-height: 100vh;
+    padding: 30px;
+}

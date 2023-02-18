@@ -1,0 +1,238 @@
+.popular_product {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sideCard {
+  width: 210px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 13px;
+}
+.product_paginate {
+  width: calc(100% - 281px);
+}
+.product_container {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  position: relative;
+  grid-gap: 34px;
+}
+
+.product_item {
+  width: 270px;
+  height: 380px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+.pro_img {
+  height: 176px;
+  width: 100%;
+  object-fit: contain;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  cursor: pointer;
+}
+.pro_title {
+  font-weight: 500;
+  font-size: 17px;
+}
+.del_price {
+  color: #999;
+  font-size: 14px;
+  font-weight: 500;
+}
+.pro_price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #db0002;
+}
+.pro_month {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 3px 6px;
+  background-color: #ffd740;
+  border-radius: 6px;
+}
+.pro_addCart {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 19px;
+  cursor: pointer;
+}
+.BiHeart {
+  color: var(--color);
+}
+.pro_money {
+  margin-left: 10px;
+  padding: 4px 40px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: transparent;
+  color: var(--color);
+  border: 2px solid var(--bg-dark);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.pro_heart {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+}
+.pro_stats {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  top: 45px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+}
+
+.Banner {
+  width: 280px;
+  border-radius: 15px;
+  height: 840px;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgb(255, 102, 0) 0%, var(--bg-dark) 100%);
+}
+.Banner h1 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 40px;
+}
+
+.Pagination {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.Pagination button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(71, 71, 71);
+  border: 1px solid gray;
+
+  margin-left: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.product_Skleton {
+  width: 270px;
+  height: 380px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(211, 67, 67);
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+
+.NavLink {
+  overflow: hidden;
+  width: 100%;
+}
+
+@-webkit-keyframes shine-loading-image {
+  0% {
+    background-position: -32px;
+  }
+  40%,
+  100% {
+    background-position: 208px;
+  }
+}
+
+@keyframes shine-loading-image {
+  0% {
+    background-position: -32px;
+  }
+  40%,
+  100% {
+    background-position: 208px;
+  }
+}
+
+@-webkit-keyframes shine-loading-container-items {
+  0% {
+    background-position: -100px;
+  }
+  40%,
+  100% {
+    background-position: 140px;
+  }
+}
+
+@keyframes shine-loading-container-items {
+  0% {
+    background-position: -100px;
+  }
+  40%,
+  100% {
+    background-position: 140px;
+  }
+}
+
+/* ----------Media--------- */
+
+@media (max-width: 1280px) {
+  .popular_product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .Banner {
+    width: 100%;
+    height: 180px;
+  }
+  .Banner h1 {
+    font-size: 35px;
+  }
+
+  .product_paginate {
+    width: 100%;
+    margin: 30px 0;
+  }
+  .product_container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    grid-gap: 15px;
+  }
+}

@@ -1,0 +1,31 @@
+.container_Sidebar{
+    width: 70px;
+    height: 571px;
+    background-color: rgb(61, 61, 61);
+    transition: .3s;
+    padding: 5px 5px 5px 20px;
+}
+
+.Side_ul li{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 5px 0;
+    background-color:aqua;
+}
+.Side_ul svg{
+    font-size: 30px;
+}
+.Open_Sidebar{
+    width: 280px;
+    transition: .3s;
+}
+.SideText{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 15px;
+    white-space: no;
+}
+.SideText_Close{
+    display: none;
+}

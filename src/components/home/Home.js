@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Carusel from "../carusel/Carusel";
 import s from "./home.module.css";
 import Properties from "../properties/Properties";
-import SaleProduct from "../saleProduct/SaleProduct";
 import Recommendat from "../category/Category";
 import Item from "../item/Item";
 

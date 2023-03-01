@@ -42,7 +42,10 @@ const Favorites = () => {
                 {heart_id.some((i) => i === item._id) ? (
                   <AiFillHeart onClick={() => deleteFromHeart(item)} />
                 ) : (
-                  <BiHeart className={p.red_heard} onClick={() => addToFavorites(item)} />
+                  <BiHeart
+                    className={p.red_heard}
+                    onClick={() => addToFavorites(item)}
+                  />
                 )}
               </span>
               <span className={p.pro_stats}>
@@ -50,9 +53,9 @@ const Favorites = () => {
               </span>
               <img className={p.pro_img} src={item.img} alt="" />
               <p className={p.pro_title}>{item.item}</p>
-              <p className={p.pro_price}>{item.price.brm()} so'm</p>
+              <p className={p.pro_price}>{item.price} so'm</p>
               <p className={p.pro_month}>
-                {Math.floor((item?.price / 10) * 1.1).brm()}
+                {Math.floor((item?.price / 10) * 1.1)}
               </p>
 
               <div style={{ width: "auto", display: "flex" }}>

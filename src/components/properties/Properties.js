@@ -7,12 +7,11 @@ import { BsCart2 } from "react-icons/bs";
 import { useSelector, useDispatch } from "react-redux";
 import {} from "number-brm";
 import { addCart } from "../../hooks/useCart";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { addHeart } from "../../hooks/useFavorite";
 import NoImg from "../../assets/noImg.jpg";
 import { NavLink } from "react-router-dom";
-import Fly from "../flyToCart/Fly";
+
 function Properties({ base }) {
   const pageNumbers = [];
 
@@ -35,11 +34,11 @@ function Properties({ base }) {
 
   const addToCart = (pro) => {
     console.log(pro);
-    return addCart(pro, cart, dispatch, toast);
+    return addCart(pro, cart, dispatch);
   };
 
   const addToFavorites = (item) => {
-    return addHeart(item, dispatch, toast);
+    return addHeart(item, dispatch);
   };
 
   const [fly, setFly] = useState(false);
@@ -64,9 +63,6 @@ function Properties({ base }) {
                     <BiHeart onClick={() => addToFavorites(item)} />
                   )}
                 </span>
-                {/* <span className={p.pro_stats}>
-                  <IoIosStats />
-                </span> */}
                 <NavLink
                   style={{
                     backgroundImage: `url(${item.img})`,
@@ -78,7 +74,7 @@ function Properties({ base }) {
                   <img className={p.pro_img} src={item.img || NoImg} alt="" />
                 </NavLink>
                 <p className={p.pro_title}>{item.item}</p>
-                {/* <del className={p.del_price}>{item?.del_price}</del> */}
+
                 <p className={p.pro_price}>{item.price.brm()} so'm</p>
                 <p className={p.pro_month}>
                   {Math.floor((item?.price / 10) * 1.1).brm()}
@@ -99,7 +95,6 @@ function Properties({ base }) {
               </div>
             </>
           ))}
-          {fly.length ? <Fly fly={fly} /> : ""}
         </div>
 
         <div className={p.Pagination}>
@@ -112,7 +107,6 @@ function Properties({ base }) {
           })}
         </div>
       </div>
-      <ToastContainer />
     </div>
   );
 }

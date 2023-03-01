@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
 const minURL = axios.create({
-    baseURL: "http://localhost:5000"
-})
+  baseURL: "https://olma-uz.onrender.com",
+});
 
 export default minURL;

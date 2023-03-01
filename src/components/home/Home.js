@@ -5,7 +5,7 @@ import Properties from "../properties/Properties";
 import SaleProduct from "../saleProduct/SaleProduct";
 import Recommendat from "../category/Category";
 import Item from "../item/Item";
-import Section from "../section/Section";
+
 import axios from "../../api";
 import { useSelector } from "react-redux";
 
@@ -24,19 +24,15 @@ const Home = () => {
           setLoading(false);
         }
       })
-      .catch((err) => console.log("err>>", err))
-    
+      .catch((err) => console.log("err>>", err));
   }, [reload]);
 
-
   return (
-    <div className='container'>
-      {!loading ? <Carusel base={base}/> : ""}
-      {!loading ? <Recommendat /> : ""}
+    <div className="container">
+      <Carusel />
+      <Recommendat />
       {!loading ? <Properties base={base} /> : ""}
-      {!loading ? <SaleProduct  base={base} /> : ""}
-      {!loading ? <Item  base={base} /> : ""}
-      {!loading ? <Section  base={base} /> : ""}
+      {!loading ? <Item base={base} /> : ""}
     </div>
   );
 };

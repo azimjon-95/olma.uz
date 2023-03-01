@@ -57,19 +57,16 @@ const SearchBar = () => {
   //   setOpenModal(!openModal );
   // }
 
-
-
   const [scrollBorder, setScrollBorder] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 70) {
-        setScrollBorder(true)
+        setScrollBorder(true);
       } else {
-        setScrollBorder
-        (false)
+        setScrollBorder(false);
       }
-    })
+    });
   }, []);
 
   // const scrollUp = () =>{
@@ -144,10 +141,6 @@ const SearchBar = () => {
 
           <div className="Search_Menu_Box">
             <div className="Menu_Box desktopBlock">
-              <BiHomeAlt />
-              <p>Asosiy</p>
-            </div>
-            <div className="Menu_Box desktopBlock">
               <TbListSearch />
               <p>Katalog</p>
             </div>
@@ -162,6 +155,10 @@ const SearchBar = () => {
                 {heart?.length}
               </span>
             </NavLink>
+            <div className="Menu_Box desktopBlock">
+              <BiHomeAlt />
+              <p>Asosiy</p>
+            </div>
             <NavLink to="/cart" className="Menu_Box">
               <BsCart2 />
               <p>Savatcha</p>

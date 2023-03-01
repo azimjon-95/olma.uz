@@ -1,12 +1,11 @@
-
 .Box_cont {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 3;
-  background-color:rgb(255, 255, 255);
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
 }
-.Box_cont.Box_cont-show{
+.Box_cont.Box_cont-show {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .Search_Container {
@@ -18,7 +17,7 @@
   justify-content: space-between;
 }
 
-.Logo_Box{
+.Logo_Box {
   font-size: 45px;
   font-weight: 600;
   text-decoration: none;
@@ -181,7 +180,6 @@
 }
 .Menu_Box > svg {
   font-size: 25px;
- 
 }
 .Menu_Box > p {
   font-size: 17px;
@@ -198,7 +196,7 @@
   display: none;
 }
 
-.searching_products_container{
+.searching_products_container {
   width: 100%;
   height: 0;
   overflow: hidden;
@@ -207,12 +205,12 @@
   position: absolute;
   z-index: 3;
   left: 0;
-  top: 100% ;
+  top: 100%;
   padding: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
-.searching_products_container.searchOpen{
+.searching_products_container.searchOpen {
   padding: 12px;
   height: auto;
   opacity: 1;
@@ -258,21 +256,21 @@
   padding: 12px;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-} 
+}
 .Menu__box {
   width: 100%;
   display: flex;
   flex-direction: column;
   background: #fff;
   gap: 16px;
-} 
+}
 .Menu.Show {
   opacity: 1;
   display: block;
-} 
+}
 
 .Menu_item {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   cursor: pointer;
   font-weight: 600;
@@ -283,10 +281,10 @@
   color: rgb(66, 66, 66);
 }
 .Menu_item:hover {
-  color: var(--color)
+  color: var(--color);
 }
 
-.Open_close{
+.Open_close {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -295,22 +293,17 @@
   top: 0;
 }
 
-
-.search_empty{
+.search_empty {
   width: 100%;
   height: 100px;
   text-align: center;
   padding-top: 10px;
   color: #999;
 }
-.search_empty svg{
+.search_empty svg {
   font-size: 38px;
   color: var(--bg-py);
 }
-
-
-
-
 
 /* ----------Media--------- */
 
@@ -380,7 +373,7 @@
     position: absolute;
     right: 14px;
     top: -140px;
-  } 
+  }
 }
 
 @media (max-width: 780px) {
@@ -403,5 +396,47 @@
   .Menu_Box > p {
     font-size: 15px;
     font-weight: 600;
+  }
+}
+
+@media (max-width: 450px) {
+  .Search_Container {
+    height: 55px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+  }
+  .kotalog_Box {
+    width: 40px;
+    height: 40px;
+    border: 3px solid black;
+  }
+  .Search_Menu_Box {
+    height: 65px;
+  }
+  .Menu_Box {
+    width: 80px;
+    height: 45px;
+    color: #000;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .Menu_Box > svg {
+    font-size: 23px;
+  }
+  .Menu_Box > p {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .Search_Box {
+    width: 100%;
+    height: 40px;
+    margin: 0 0 0 15px;
   }
 }

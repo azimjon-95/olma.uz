@@ -64,10 +64,17 @@ function Properties({ base }) {
                     <BiHeart onClick={() => addToFavorites(item)} />
                   )}
                 </span>
-                <span className={p.pro_stats}>
+                {/* <span className={p.pro_stats}>
                   <IoIosStats />
-                </span>
-                <NavLink className={p.NavLink} to={`/product/${item?._id}`}>
+                </span> */}
+                <NavLink
+                  style={{
+                    backgroundImage: `url(${item.img})`,
+                    backgroundPosition: "center",
+                  }}
+                  className={p.NavLink}
+                  to={`/product/${item?._id}`}
+                >
                   <img className={p.pro_img} src={item.img || NoImg} alt="" />
                 </NavLink>
                 <p className={p.pro_title}>{item.item}</p>
@@ -77,7 +84,7 @@ function Properties({ base }) {
                   {Math.floor((item?.price / 10) * 1.1).brm()}
                 </p>
 
-                <div style={{ width: "auto", display: "flex" }}>
+                <div style={{ width: "100%", display: "flex" }}>
                   <button
                     onClick={() => {
                       addToCart(item);

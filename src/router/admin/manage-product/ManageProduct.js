@@ -2,7 +2,7 @@ import React from 'react'
 
 function ManageProduct() {
   return (
-    <div>ManageProduct</div>
+    <div>Manage Product</div>
   )
 }
 

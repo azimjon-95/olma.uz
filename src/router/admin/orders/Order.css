@@ -1,0 +1,74 @@
+.order{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.order__item{
+    width: 250px;
+    height: 300px;
+    border: 1px solid #333333;
+    margin-left: 20px;
+}
+.order__item >h2{
+    text-align: center;
+}
+.order__item >p{
+    text-align: center;
+    margin-top: 5px;
+}
+.order__item >h4{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.order__items{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: dodgerblue;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.order__card{
+    width: 80%;
+    height: 25px;
+    margin-left: 10%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.order__card-single{
+    display: flex;
+    margin-top: 10px;
+}
+
+.order__card-single h4{
+    flex: 1;
+}
+
+.order__show{
+    position: fixed;
+    top: 150%;
+    left: 20%;
+    width: 70%;
+    height: 60vh;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    transition: .6s ease-in;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 30px;
+    opacity: 0;
+}
+.order__show.orderShow{
+    top: 20%;
+    opacity: 1;
+    transition: .6s ease-in;
+}

@@ -18,7 +18,7 @@ const Home = () => {
     axios
       .get("/products")
       .then((res) => {
-        setBase(res.data.innerData || []);
+        setBase(res.data.data || []);
         if (res.data.state) {
           setLoading(false);
         }
@@ -26,6 +26,7 @@ const Home = () => {
       .catch((err) => console.log("err>>", err));
   }, [reload]);
 
+  console.log(base);
   return (
     <div className="container">
       <Carusel />

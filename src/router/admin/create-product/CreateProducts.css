@@ -1,4 +1,72 @@
+.createProducts {
+    width: 100%;
+    height: 100%;
+    color: var(--bg-dark);
+}
 
-.create__product-item label{
+.createProducts form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.createProducts h2 {
+    font-weight: normal;
+}
+
+.create__product-item {
+    width: 60%;
+    margin: 10px 0;
+}
+
+.create__product-item div {
+    display: flex;
+}
+
+.create__product-item input,
+.create__product-item select {
+    width: 100%;
+    height: 30px;
+    text-indent: 10px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.create__product-item input[type="number"]::-webkit-outer-spin-button,
+.create__product-item input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.create__product-item input::placeholder {
+    text-transform: capitalize;
+}
+
+.create__product-item label {
     display: block;
+}
+
+.create__product-item input[type="file"] {
+    display: none;
+}
+
+.create__product-item svg {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.create__product-item:nth-child(14) {
+    display: inline;
+    width: 6%;
+}
+
+.createProducts .CretateBtn {
+    width: 30%;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: rgb(25, 179, 25);
+    border: none;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
 }

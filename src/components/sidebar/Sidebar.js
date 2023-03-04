@@ -1,57 +1,75 @@
-import React, { useEffect, useState } from "react";
-import "./sidebar.css";
-import { BiUser } from "react-icons/bi";
-import { VscGitPullRequestCreate } from "react-icons/vsc";
-import { IoIosStats } from "react-icons/io";
-import { BsWallet2 } from "react-icons/bs";
+import React, { useState, memo } from "react";
+import "./Sidebar.css";
+import { AiOutlineBars, AiFillHome } from "react-icons/ai";
+import { FaDatabase } from "react-icons/fa";
+import { MdOutlineCreate } from "react-icons/md";
+import { HiChartPie, HiUsers, HiOutlineUserCircle } from "react-icons/hi";
+import { BiDoorOpen } from "react-icons/bi";
+import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
+import {ADMINS_ROUTER} from "../../static/adminRouter"
 
-const Sidebar = () => {
-  const [openSidebar, setOpenSidebar] = useState(false);
+function Sidebar() {
+  const [sidebar, setSidebar] = useState(false);
+
   return (
-    <div className={`container_Sidebar ${openSidebar ? "Open_Sidebar" : ""}`}>
-      <button onClick={() => setOpenSidebar(!openSidebar)}>ok</button>
-      <ul className="Side_ul">
-        <li>
+    <>
+      <div className={`big__sidebar ${sidebar ? "sidebar_show" : ""}`}>
+        {sidebar ? (
+          <div className="bigSidebar__box">
+            <HiOutlineUserCircle onClick={() => setSidebar(true)} />
+            <h3 className={`categories_title ${sidebar ? "" : "title_show"}`}>
+              Musaffo
+            </h3>
+            <IoMdClose
+              onClick={() => setSidebar(false)}
+              className={`categories_icon ${sidebar ? "" : "icon_show"}`}
+            />
+          </div>
+        ) : (
+          <div
+            className="bigSidebar__categories"
+            onClick={() => setSidebar(true)}
+          >
+            <span>
+              <AiOutlineBars />
+            </span>
+          </div>
+        )}
+        <Link to="/admin" className="bigSidebar__categories">
           <span>
-            <BiUser />
+            <AiFillHome />
           </span>
-
-          <p className={`SideText ${openSidebar ? "" : "SideText_Close"}`}>
-            All users
-          </p>
-        </li>
-        <li>
+          <h3 className={`categories_title ${sidebar ? "" : "title_show"}`}>
+            Asosiy sahifa
+          </h3>
+        </Link>
+        {
+          ADMINS_ROUTER?.map(({icon,path,title}, inx)=> <Link key={inx} to={path.slice(1)} className="bigSidebar__categories">
           <span>
-            <VscGitPullRequestCreate />
+            {icon}
           </span>
-
-          <p className={`SideText ${openSidebar ? "" : "SideText_Close"}`}>
-            Create products
-          </p>
-        </li>
-        <li>
+          <h3 className={`categories_title ${sidebar ? "" : "title_show"}`}>
+            {title}
+          </h3>
+        </Link>)
+        }
+        <div className="bigSidebar__categories">
           <span>
-            <IoIosStats />
+            <BiDoorOpen />
           </span>
-
-          <p className={`SideText ${openSidebar ? "" : "SideText_Close"}`}>
-            Statistika
-          </p>
-        </li>
-        <li>
-          <span>
-            <BsWallet2 />
-          </span>
-
-          <Link to="/create pro" className={`SideText ${openSidebar ? "" : "SideText_Close"}`}>
-            All products
-          </Link>
-        </li>
-        <li></li>
-      </ul>
-    </div>
+          <h3 className={`categories_title ${sidebar ? "" : "title_show"}`}>
+            Tizimdan chiqish
+          </h3>
+        </div>
+      </div>
+      {sidebar && (
+        <div className="sidebar_out" onClick={() => setSidebar(false)}></div>
+      )}
+    </>
   );
-};
+}
 
-export default Sidebar;
+
+export default memo(Sidebar);
+

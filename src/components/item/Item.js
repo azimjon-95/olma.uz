@@ -41,9 +41,8 @@ const Item = ({ base }) => {
             className={p.swiper}
           >
             {base?.map((item, inx) => (
-              <>
-                <SwiperSlide key={inx} className={p.product_item}>
-                  {/* <span className={p.pro_heart}>
+              <SwiperSlide key={inx} className={p.product_item}>
+                {/* <span className={p.pro_heart}>
                     {heart.some((i) => i === item._id) ? (
                       <AiFillHeart
                         className={p.BiHeart}
@@ -53,39 +52,38 @@ const Item = ({ base }) => {
                       <BiHeart onClick={() => addToFavorites(item)} />
                     )}
                   </span> */}
-                  {/* <span className={p.pro_stats}>
+                {/* <span className={p.pro_stats}>
                   <IoIosStats />
                 </span> */}
-                  <NavLink
-                    style={{
-                      backgroundImage: `url(${item.img})`,
-                      backgroundPosition: "center",
-                    }}
-                    className={p.NavLink}
-                    to={`/product/${item?._id}`}
-                  >
-                    <img className={p.pro_img} src={item.img} alt="" />
-                  </NavLink>
-                  <p className={p.pro_title}>{item.item}</p>
-                  {/* <del className={p.del_price}>{item?.del_price}</del> */}
-                  <p className={p.pro_price}>{item.price.brm()} so'm</p>
-                  <p className={p.pro_month}>
-                    {Math.floor((item?.price / 10) * 1.1).brm()}
-                  </p>
+                <NavLink
+                  style={{
+                    backgroundImage: `url(${item.img})`,
+                    backgroundPosition: "center",
+                  }}
+                  className={p.NavLink}
+                  to={`/product/${item?._id}`}
+                >
+                  <img className={p.pro_img} src={item.img} alt="" />
+                </NavLink>
+                <p className={p.pro_title}>{item.item}</p>
+                {/* <del className={p.del_price}>{item?.del_price}</del> */}
+                <p className={p.pro_price}>{item.price.brm()} so'm</p>
+                <p className={p.pro_month}>
+                  {Math.floor((item?.price / 10) * 1.1).brm()}
+                </p>
 
-                  <div style={{ width: "100%", display: "flex" }}>
-                    <button
-                      onClick={() => {
-                        addToCart(item);
-                      }}
-                      className={p.pro_addCart}
-                    >
-                      <BsCart2 />
-                    </button>
-                    <button className={p.pro_money}>Muddatli to'lov</button>
-                  </div>
-                </SwiperSlide>
-              </>
+                <div style={{ width: "100%", display: "flex" }}>
+                  <button
+                    onClick={() => {
+                      addToCart(item);
+                    }}
+                    className={p.pro_addCart}
+                  >
+                    <BsCart2 />
+                  </button>
+                  <button className={p.pro_money}>Muddatli to'lov</button>
+                </div>
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>
@@ -101,9 +99,8 @@ const Item = ({ base }) => {
             className={p.swiper}
           >
             {base?.map((item, inx) => (
-              <>
-                <SwiperSlide key={inx} className={p.product_item}>
-                  {/* <span className={p.pro_heart}>
+              <SwiperSlide key={inx} className={p.product_item}>
+                {/* <span className={p.pro_heart}>
                     {heart.some((i) => i === item._id) ? (
                       <AiFillHeart
                         className={p.BiHeart}
@@ -113,39 +110,38 @@ const Item = ({ base }) => {
                       <BiHeart onClick={() => addToFavorites(item)} />
                     )}
                   </span> */}
-                  {/* <span className={p.pro_stats}>
+                {/* <span className={p.pro_stats}>
                   <IoIosStats />
                 </span> */}
-                  <NavLink
-                    style={{
-                      backgroundImage: `url(${item.img})`,
-                      backgroundPosition: "center",
-                    }}
-                    className={p.NavLink}
-                    to={`/product/${item?._id}`}
-                  >
-                    <img className={p.pro_img} src={item.img} alt="" />
-                  </NavLink>
-                  <p className={p.pro_title}>{item.item}</p>
-                  {/* <del className={p.del_price}>{item?.del_price}</del> */}
-                  <p className={p.pro_price}>{item.price.brm()} so'm</p>
-                  <p className={p.pro_month}>
-                    {Math.floor((item?.price / 10) * 1.1).brm()}
-                  </p>
+                <NavLink
+                  style={{
+                    backgroundImage: `url(${item.img})`,
+                    backgroundPosition: "center",
+                  }}
+                  className={p.NavLink}
+                  to={`/product/${item?._id}`}
+                >
+                  <img className={p.pro_img} src={item.img} alt="" />
+                </NavLink>
+                <p className={p.pro_title}>{item.item}</p>
+                {/* <del className={p.del_price}>{item?.del_price}</del> */}
+                <p className={p.pro_price}>{item.price.brm()} so'm</p>
+                <p className={p.pro_month}>
+                  {Math.floor((item?.price / 10) * 1.1).brm()}
+                </p>
 
-                  <div style={{ width: "100%", display: "flex" }}>
-                    <button
-                      onClick={() => {
-                        addToCart(item);
-                      }}
-                      className={p.pro_addCart}
-                    >
-                      <BsCart2 />
-                    </button>
-                    <button className={p.pro_money}>Muddatli to'lov</button>
-                  </div>
-                </SwiperSlide>
-              </>
+                <div style={{ width: "100%", display: "flex" }}>
+                  <button
+                    onClick={() => {
+                      addToCart(item);
+                    }}
+                    className={p.pro_addCart}
+                  >
+                    <BsCart2 />
+                  </button>
+                  <button className={p.pro_money}>Muddatli to'lov</button>
+                </div>
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>
@@ -161,9 +157,8 @@ const Item = ({ base }) => {
             className={p.swiper}
           >
             {base?.map((item, inx) => (
-              <>
-                <SwiperSlide key={inx} className={p.product_item}>
-                  {/* <span className={p.pro_heart}>
+              <SwiperSlide key={inx} className={p.product_item}>
+                {/* <span className={p.pro_heart}>
                     {heart.some((i) => i === item._id) ? (
                       <AiFillHeart
                         className={p.BiHeart}
@@ -173,39 +168,38 @@ const Item = ({ base }) => {
                       <BiHeart onClick={() => addToFavorites(item)} />
                     )}
                   </span> */}
-                  {/* <span className={p.pro_stats}>
+                {/* <span className={p.pro_stats}>
                   <IoIosStats />
                 </span> */}
-                  <NavLink
-                    style={{
-                      backgroundImage: `url(${item.img})`,
-                      backgroundPosition: "center",
-                    }}
-                    className={p.NavLink}
-                    to={`/product/${item?._id}`}
-                  >
-                    <img className={p.pro_img} src={item.img} alt="" />
-                  </NavLink>
-                  <p className={p.pro_title}>{item.item}</p>
-                  {/* <del className={p.del_price}>{item?.del_price}</del> */}
-                  <p className={p.pro_price}>{item.price.brm()} so'm</p>
-                  <p className={p.pro_month}>
-                    {Math.floor((item?.price / 10) * 1.1).brm()}
-                  </p>
+                <NavLink
+                  style={{
+                    backgroundImage: `url(${item.img})`,
+                    backgroundPosition: "center",
+                  }}
+                  className={p.NavLink}
+                  to={`/product/${item?._id}`}
+                >
+                  <img className={p.pro_img} src={item.img} alt="" />
+                </NavLink>
+                <p className={p.pro_title}>{item.item}</p>
+                {/* <del className={p.del_price}>{item?.del_price}</del> */}
+                <p className={p.pro_price}>{item.price.brm()} so'm</p>
+                <p className={p.pro_month}>
+                  {Math.floor((item?.price / 10) * 1.1).brm()}
+                </p>
 
-                  <div style={{ width: "100%", display: "flex" }}>
-                    <button
-                      onClick={() => {
-                        addToCart(item);
-                      }}
-                      className={p.pro_addCart}
-                    >
-                      <BsCart2 />
-                    </button>
-                    <button className={p.pro_money}>Muddatli to'lov</button>
-                  </div>
-                </SwiperSlide>
-              </>
+                <div style={{ width: "100%", display: "flex" }}>
+                  <button
+                    onClick={() => {
+                      addToCart(item);
+                    }}
+                    className={p.pro_addCart}
+                  >
+                    <BsCart2 />
+                  </button>
+                  <button className={p.pro_money}>Muddatli to'lov</button>
+                </div>
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>
@@ -221,9 +215,8 @@ const Item = ({ base }) => {
             className={p.swiper}
           >
             {base?.map((item, inx) => (
-              <>
-                <SwiperSlide key={inx} className={p.product_item}>
-                  {/* <span className={p.pro_heart}>
+              <SwiperSlide key={inx} className={p.product_item}>
+                {/* <span className={p.pro_heart}>
                     {heart.some((i) => i === item._id) ? (
                       <AiFillHeart
                         className={p.BiHeart}
@@ -234,29 +227,28 @@ const Item = ({ base }) => {
                     )}
                   </span> */}
 
-                  <NavLink className={p.NavLink} to={`/product/${item?._id}`}>
-                    <img className={p.pro_img} src={item.img} alt="" />
-                  </NavLink>
-                  <p className={p.pro_title}>{item.item}</p>
-                  {/* <del className={p.del_price}>{item?.del_price}</del> */}
-                  <p className={p.pro_price}>{item.price.brm()} so'm</p>
-                  <p className={p.pro_month}>
-                    {Math.floor((item?.price / 10) * 1.1).brm()}
-                  </p>
+                <NavLink className={p.NavLink} to={`/product/${item?._id}`}>
+                  <img className={p.pro_img} src={item.img} alt="" />
+                </NavLink>
+                <p className={p.pro_title}>{item.item}</p>
+                {/* <del className={p.del_price}>{item?.del_price}</del> */}
+                <p className={p.pro_price}>{item.price.brm()} so'm</p>
+                <p className={p.pro_month}>
+                  {Math.floor((item?.price / 10) * 1.1).brm()}
+                </p>
 
-                  <div style={{ width: "100%", display: "flex" }}>
-                    <button
-                      onClick={() => {
-                        addToCart(item);
-                      }}
-                      className={p.pro_addCart}
-                    >
-                      <BsCart2 />
-                    </button>
-                    <button className={p.pro_money}>Muddatli to'lov</button>
-                  </div>
-                </SwiperSlide>
-              </>
+                <div style={{ width: "100%", display: "flex" }}>
+                  <button
+                    onClick={() => {
+                      addToCart(item);
+                    }}
+                    className={p.pro_addCart}
+                  >
+                    <BsCart2 />
+                  </button>
+                  <button className={p.pro_money}>Muddatli to'lov</button>
+                </div>
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>

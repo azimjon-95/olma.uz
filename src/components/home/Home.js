@@ -18,7 +18,7 @@ const Home = () => {
     axios
       .get("/products")
       .then((res) => {
-        setBase(res.data.data || []);
+        setBase(res.data.innerData || []);
         if (res.data.state) {
           setLoading(false);
         }
@@ -30,8 +30,19 @@ const Home = () => {
     <div className="container">
       <Carusel />
       <Recommendat />
-      {!loading ? <Properties base={base} /> : ""}
-      {!loading ? <Item base={base} /> : ""}
+      {!loading ? (
+        <>
+          <Properties base={base} />
+          <Item base={base} />
+        </>
+      ) : (
+        <div className={s.Loadin}>
+          <h3 className={s.Load}>Loading</h3>
+          <h1 className={s.Load_1}>.</h1>
+          <h1 className={s.Load_2}>.</h1>
+          <h1 className={s.Load_3}>.</h1>
+        </div>
+      )}
     </div>
   );
 };

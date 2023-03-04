@@ -16,7 +16,7 @@ function Properties({ base }) {
   const pageNumbers = [];
 
   const cart = useSelector((s) => s.reduxCart);
-  const heart = useSelector((s) => s.addToHeart).map((i) => i._id); // for heart custom
+  // const heart = useSelector((s) => s.addToHeart).map((i) => i._id); // for heart custom
 
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
@@ -53,7 +53,7 @@ function Properties({ base }) {
           {currentPosts?.map((item, inx) => (
             <>
               <div key={inx} className={p.product_item}>
-                <span className={p.pro_heart}>
+                {/* <span className={p.pro_heart}>
                   {heart.some((i) => i === item._id) ? (
                     <AiFillHeart
                       className={p.BiHeart}
@@ -62,7 +62,7 @@ function Properties({ base }) {
                   ) : (
                     <BiHeart onClick={() => addToFavorites(item)} />
                   )}
-                </span>
+                </span> */}
                 <NavLink
                   style={{
                     backgroundImage: `url(${item.img})`,

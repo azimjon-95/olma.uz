@@ -1,0 +1,32 @@
+.Loadin {
+  display: flex;
+  justify-content: center;
+}
+.Load {
+  color: #666c;
+}
+.Load_1 {
+  color: #666c;
+  line-height: 18px;
+  margin: 0 1px;
+  animation: opo 0.71s infinite linear;
+}
+.Load_2 {
+  color: #666c;
+  margin: 0 1px;
+  line-height: 18px;
+  animation: opo 0.72s infinite linear;
+}
+.Load_3 {
+  color: #666c;
+  line-height: 18px;
+  animation: opo 0.73s infinite linear;
+}
+@keyframes opo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

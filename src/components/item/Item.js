@@ -15,7 +15,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Item = ({ base }) => {
   const cart = useSelector((s) => s.reduxCart);
-  const heart = useSelector((s) => s.addToHeart).map((i) => i._id); // for heart custom
+  // const heart = useSelector((s) => s.addToHeart).map((i) => i._id); // for heart custom
   const dispatch = useDispatch();
 
   const addToCart = (pro) => {
@@ -43,7 +43,7 @@ const Item = ({ base }) => {
             {base?.map((item, inx) => (
               <>
                 <SwiperSlide key={inx} className={p.product_item}>
-                  <span className={p.pro_heart}>
+                  {/* <span className={p.pro_heart}>
                     {heart.some((i) => i === item._id) ? (
                       <AiFillHeart
                         className={p.BiHeart}
@@ -52,7 +52,7 @@ const Item = ({ base }) => {
                     ) : (
                       <BiHeart onClick={() => addToFavorites(item)} />
                     )}
-                  </span>
+                  </span> */}
                   {/* <span className={p.pro_stats}>
                   <IoIosStats />
                 </span> */}
@@ -103,7 +103,7 @@ const Item = ({ base }) => {
             {base?.map((item, inx) => (
               <>
                 <SwiperSlide key={inx} className={p.product_item}>
-                  <span className={p.pro_heart}>
+                  {/* <span className={p.pro_heart}>
                     {heart.some((i) => i === item._id) ? (
                       <AiFillHeart
                         className={p.BiHeart}
@@ -112,7 +112,7 @@ const Item = ({ base }) => {
                     ) : (
                       <BiHeart onClick={() => addToFavorites(item)} />
                     )}
-                  </span>
+                  </span> */}
                   {/* <span className={p.pro_stats}>
                   <IoIosStats />
                 </span> */}
@@ -163,7 +163,7 @@ const Item = ({ base }) => {
             {base?.map((item, inx) => (
               <>
                 <SwiperSlide key={inx} className={p.product_item}>
-                  <span className={p.pro_heart}>
+                  {/* <span className={p.pro_heart}>
                     {heart.some((i) => i === item._id) ? (
                       <AiFillHeart
                         className={p.BiHeart}
@@ -172,7 +172,7 @@ const Item = ({ base }) => {
                     ) : (
                       <BiHeart onClick={() => addToFavorites(item)} />
                     )}
-                  </span>
+                  </span> */}
                   {/* <span className={p.pro_stats}>
                   <IoIosStats />
                 </span> */}
@@ -223,7 +223,7 @@ const Item = ({ base }) => {
             {base?.map((item, inx) => (
               <>
                 <SwiperSlide key={inx} className={p.product_item}>
-                  <span className={p.pro_heart}>
+                  {/* <span className={p.pro_heart}>
                     {heart.some((i) => i === item._id) ? (
                       <AiFillHeart
                         className={p.BiHeart}
@@ -232,7 +232,7 @@ const Item = ({ base }) => {
                     ) : (
                       <BiHeart onClick={() => addToFavorites(item)} />
                     )}
-                  </span>
+                  </span> */}
 
                   <NavLink className={p.NavLink} to={`/product/${item?._id}`}>
                     <img className={p.pro_img} src={item.img} alt="" />

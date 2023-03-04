@@ -6,7 +6,7 @@ const addToHeart = (state = [], action) => {
       if (state.some((i) => i._id === action.payload._id)) {
         return state.filter((i) => i._id !== action.payload._id);
       }
-      return (state = action.payload);
+      return (state = [...state, action.payload]);
     default:
       return state;
   }

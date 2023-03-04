@@ -39,23 +39,19 @@ const SearchBar = () => {
   useEffect(() => {
     if (value.length) {
       setLoading(true);
+
       axios
-        .get(`/products/search?searchingValue=${value}`)
+        .get(`/product/search?searchingValue=${value}`)
         .then((res) => {
-          setFilterData(res.data.data);
+          setFilterData(res.data.innerData);
           setLoading(false);
         })
         .catch((err) => console.log(err));
+      return;
     } else {
       return;
     }
   }, [value]);
-
-  // console.log(filterData);
-  // ---Personal modal-----
-  // function modalShow() {
-  //   setOpenModal(!openModal );
-  // }
 
   const [scrollBorder, setScrollBorder] = useState(false);
 
@@ -69,13 +65,6 @@ const SearchBar = () => {
     });
   }, []);
 
-  // const scrollUp = () =>{
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-
-  //   })
-  // }
   return (
     <div className={`Box_cont ${scrollBorder ? "Box_cont-show" : ""}`}>
       <div className="container">
@@ -106,6 +95,45 @@ const SearchBar = () => {
               <FiSearch />
             </button>
             {value && (
+              <div className="searching actives">
+                {filterData.length ? (
+                  filterData?.map((value, _id) => (
+                    <NavLink
+                      to={`/products/${_id}`}
+                      onClick={() => setValue("")}
+                      key={_id}
+                      className="searching_product"
+                    >
+                      <div className="left_side">
+                        <img src={value?.url} alt="" />
+                        <div>
+                          <span>Nomi</span>
+                          <h4>
+                            {value?.item.length > 17
+                              ? value?.item.slice(0, 17) + "..."
+                              : value?.item}
+                          </h4>
+                        </div>
+                      </div>
+                      <div></div>
+                    </NavLink>
+                  ))
+                ) : loading ? (
+                  <div className="Loadin">
+                    <h3 className="Load">Loading</h3>
+                    <h1 className="Load_1">.</h1>
+                    <h1 className="Load_2">.</h1>
+                    <h1 className="Load_3">.</h1>
+                  </div>
+                ) : (
+                  <div className="search_empty">
+                    <TbMoodSad />
+                    <p>Hech narsa topilmadi</p>
+                  </div>
+                )}
+              </div>
+            )}
+            {/* {value && (
               <div
                 className={`searching_products_container ${
                   value ? "searchOpen" : ""
@@ -136,7 +164,7 @@ const SearchBar = () => {
                   </div>
                 )}
               </div>
-            )}
+            )} */}
           </div>
 
           <div className="Search_Menu_Box">

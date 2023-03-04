@@ -48,17 +48,16 @@ const Favorites = () => {
                   />
                 )}
               </span>
-              <span className={p.pro_stats}>
-                <IoIosStats />
-              </span>
-              <img className={p.pro_img} src={item.img} alt="" />
+              <NavLink className={p.NavLink} to={`/product/${item?._id}`}>
+                <img className={p.pro_img} src={item.img} alt="" />
+              </NavLink>
               <p className={p.pro_title}>{item.item}</p>
-              <p className={p.pro_price}>{item.price} so'm</p>
+              <p className={p.pro_price}>{item.price.brm()} so'm</p>
               <p className={p.pro_month}>
-                {Math.floor((item?.price / 10) * 1.1)}
+                {Math.floor((item?.price / 10) * 1.1).brm()}
               </p>
 
-              <div style={{ width: "auto", display: "flex" }}>
+              <div style={{ width: "100%", display: "flex" }}>
                 <button
                   onClick={() => addToCart(item._id)}
                   className={p.pro_addCart}

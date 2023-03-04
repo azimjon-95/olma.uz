@@ -10,7 +10,6 @@ const Register = ({ show, setShows, setShowReg }) => {
   const [eye, setEye] = useState(false);
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
-  const [img, setImg] = useState("");
   const [age, setAge] = useState("");
   const [country, setCountry] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
@@ -24,7 +23,15 @@ const Register = ({ show, setShows, setShowReg }) => {
   const createProduct = (e) => {
     setLoading(true);
     e.preventDefault();
-    let newPro = { fname, lname, img, age, phoneNum, country, username, password };
+    let newPro = {
+      fname,
+      lname,
+      age,
+      phoneNum,
+      country,
+      username,
+      password,
+    };
     console.log(newPro);
 
     axios
@@ -37,7 +44,6 @@ const Register = ({ show, setShows, setShowReg }) => {
         setFname("");
         setLname("");
         setAge("");
-        setImg("");
         setCountry("");
         setPhoneNum("");
         setUsername("");
@@ -60,7 +66,11 @@ const Register = ({ show, setShows, setShowReg }) => {
         <div onClick={() => setShows(false)} className="Container"></div>
       )}
 
-      <form action="" onSubmit={createProduct} className={`Box_reg ${show ? "shows" : ""}`}>
+      <form
+        action=""
+        onSubmit={createProduct}
+        className={`Box_reg ${show ? "shows" : ""}`}
+      >
         <div className="Logouts">
           <p onClick={() => setShows(false)}>+</p>
         </div>
@@ -82,20 +92,13 @@ const Register = ({ show, setShows, setShowReg }) => {
         <input
           className="Inp_reg"
           type="text"
-          value={img}
-          placeholder="Image..."
-          onChange={(e) => setImg(e.target.value)}
-        />
-        <input
-          className="Inp_reg"
-          type="text"
           value={age}
           placeholder="Age..."
           onChange={(e) => setAge(e.target.value)}
         />
         <input
           className="Inp_reg"
-          type= "text"
+          type="text"
           value={phoneNum}
           placeholder="Phone number..."
           onChange={(e) => setPhoneNum(e.target.value)}
@@ -125,7 +128,7 @@ const Register = ({ show, setShows, setShowReg }) => {
             {eye ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
           </button>
         </div>
-        <button disabled={loading}>{loading? "Loading..." : "Submit"}</button>
+        <button disabled={loading}>{loading ? "Loading..." : "Submit"}</button>
         <span>
           <p
             onClick={() => {

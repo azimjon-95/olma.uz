@@ -1,117 +1,163 @@
-.Container{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 3;
-    background-color: #0009;
+.Container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  background-color: #0009;
 }
 
-.Box_reg{
-    position: fixed;
-    top: 150%;
-    left: 50%;
-    z-index: 4;
-    transform: translate(-50%, -50%);
-    width: 420px;
-    background-color: rgb(220, 220, 220);
-    padding: 20px;
-    border-radius: 15px;
-    transition:  .3s ease-in;
+.Box_reg {
+  position: fixed;
+  top: 150%;
+  left: 50%;
+  opacity: 0;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  background-color: rgb(220, 220, 220);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s ease-in;
 }
-.Logouts{
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: flex-end;
-    
+.Logouts {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
-.Logouts > p{
-   transform: rotate(45deg);
-   cursor: pointer;
-   font-size: 38px;
+.Logouts > p {
+  transform: rotate(45deg);
+  cursor: pointer;
+  font-size: 38px;
 }
-.Box_reg > h2{
-    text-align: center;
-    margin-bottom: 10px;
+.Box_reg > h2 {
+  text-align: center;
+  margin-bottom: 10px;
 }
-.Box_reg.shows{
-    top: 50%;
-    transition:  .3s ease-in;
+.Box_reg.shows {
+  opacity: 1;
+  top: 50%;
+  transition: 0.3s ease-in;
 }
-.Inp_reg{
-    width: 100%;
-    height: 40px;
-    border-radius: 50px;
-    margin: 20px 0;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    text-indent: 10px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.Inp_reg > input{
-    width: 100%;
-    height: 40px;
-    font-size: 18px;
-    border-radius: 50px;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    text-indent: 10px;
+.Inp_reg {
+  width: 100%;
+  height: 40px;
+  border-radius: 50px;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  text-indent: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.Inp_reg > button{
-    width: 40px;
-    height: 40px;
-    border-radius:0 50px 50px 0;
-    border: none;
-    cursor: pointer;
-    background-color: #fff;
-    text-indent: 10px;
+.Inp_reg > input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  text-indent: 10px;
 }
-.Inp_reg > button> svg{
-    margin-right: 19px;
-    margin-top: 3px;
-    font-size: 24px;
+
+.Inp_reg > button {
+  width: 40px;
+  height: 40px;
+  border-radius: 0 50px 50px 0;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  text-indent: 10px;
 }
-.Box_reg > button{
-    width: 100%;
-    height: 40px;
-    border-radius:50px;
-    border: none;
-    margin: 15px 0;
-    cursor: pointer;
-    color: #fff;
-    font-size: 20px;
-    background-color: rgb(10, 206, 0);
+.Inp_reg > button > svg {
+  margin-right: 19px;
+  margin-top: 3px;
+  font-size: 24px;
 }
-.Box_reg > span{
-    width: 100%;
+.Box_reg > button {
+  width: 100%;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  margin: 15px 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  background-color: rgb(10, 206, 0);
+}
+.Box_reg > span {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Box_reg > span > p {
+  font-size: 16px;
+  color: blue;
+  cursor: pointer;
+}
+.Box_reg > span > p:hover {
+  text-decoration: underline;
+}
+
+.Box_reg > span > a {
+  font-size: 17px;
+  text-decoration: none;
+  color: blue;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .Box_reg {
+    width: 300px;
+  }
+  .Inp_reg {
     height: 35px;
-    display: flex;
-    margin-top: 15px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.Box_reg > span > p{
     font-size: 16px;
-    color: blue;
-    cursor: pointer;
-}
-.Box_reg > span > p:hover{
-    text-decoration: underline;
-}
+    margin: 13px 0;
+  }
 
-.Box_reg > span > a{
-    font-size: 17px;
-    text-decoration: none;
-    color: blue;
+  .Inp_reg > input {
+    height: 34px;
+    font-size: 16px;
+  }
+
+  .Inp > button {
+    height: 34px;
+  }
+  .Inp > button > svg {
+    margin-right: 19px;
+    font-size: 22px;
+  }
+  .Inp_reg > button {
+    height: 35px;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .Box > span > p {
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+  }
+  .Inp_reg > h2 {
+    font-size: 21px;
+  }
+  .Logouts > p {
+    transform: rotate(45deg);
+    position: absolute;
+    right: 6px;
+    top: -7px;
     cursor: pointer;
+    font-size: 38px;
+  }
 }

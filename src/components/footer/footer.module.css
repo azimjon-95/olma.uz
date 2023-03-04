@@ -4,15 +4,7 @@
   background-color: rgb(227, 227, 227);
 }
 
-.Container_Top {
-  height: 350px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-
-  justify-content: center;
-}
-.Top {
+/* .Top {
   height: 350px;
   width: 50%;
   display: flex;
@@ -45,7 +37,7 @@
 }
 .Top > img {
   width: 75%;
-}
+} */
 
 .Container_Main {
   width: 100%;
@@ -181,10 +173,25 @@
   }
   .Main_Left > p {
     padding: 6px 0;
-    font-size: 17px;
+    font-size: 15px;
+    width: 70%;
   }
   .Main_Left > b {
     margin-top: 15px;
     font-size: 20px;
+  }
+  .Main_Left h2 {
+    font-size: 19px;
+    color: #000000;
+    cursor: pointer;
+  }
+  .Container_Main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 20px 0; */
+    border-bottom: 0px solid rgb(185, 185, 185);
+    border-top: 0px solid rgb(185, 185, 185);
+    justify-content: space-between;
   }
 }

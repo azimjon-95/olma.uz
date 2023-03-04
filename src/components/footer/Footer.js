@@ -10,24 +10,6 @@ const Footer = () => {
   return (
     <div className={s.Container}>
       <div className="container">
-        <div className={s.Container_Top}>
-          <div className={s.Top}>
-            <h2>
-              Наше мобильное приложение доступно в Google play
-            </h2>
-            <div className={s.Link_box}>
-              <div className={s.Link}>
-                <img
-                  src="https://olcha.uz/_nuxt/googleplay.4ba35be8.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div className={s.Top}>
-            <img src="https://olcha.uz/_nuxt/footer-img.745872f8.webp" alt="" />
-          </div>
-        </div>
         <div className={s.Container_Main}>
           <div className={s.Main_Left}>
             <NavLink to="/" className="Logo_Box">

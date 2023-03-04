@@ -7,44 +7,41 @@ import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper";
-
-import { useSelector, useDispatch } from "react-redux";
-import { addCart } from "../../hooks/useCart";
-import { toast } from "react-toastify";
+// import { useSelector, useDispatch } from "react-redux";
+// import { addCart } from "../../hooks/useCart";
+// import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { addHeart } from "../../hooks/useFavorite";
-import axios from "../../api";
+// import { addHeart } from "../../hooks/useFavorite";
+// import axios from "../../api";
 
 const Carusel = () => {
-  const [base, setBase] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const reload = useSelector((s) => s.reload);
-  const cart = useSelector((s) => s.reduxCart);
-  const heart = useSelector((s) => s.addToHeart).map((i) => i._id); // for heart custom
+  // const [base, setBase] = useState([]);
+  // const reload = useSelector((s) => s.reload);
+  // const cart = useSelector((s) => s.reduxCart);
 
-  const dispatch = useDispatch();
-  const dataBase = base.splice(10, 3);
+  // const dispatch = useDispatch();
+  // const dataBase = base.splice(10, 3);
 
-  const addToCart = (pro) => {
-    return addCart(pro, cart, dispatch, toast);
-  };
+  // const addToCart = (pro) => {
+  //   return addCart(pro, cart, dispatch, toast);
+  // };
 
-  const addToFavorites = (item) => {
-    return addHeart(item, dispatch, toast);
-  };
+  // const addToFavorites = (item) => {
+  //   return addHeart(item, dispatch, toast);
+  // };
 
-  useEffect(() => {
-    setLoading(true);
-    axios
-      .get("/products")
-      .then((res) => {
-        setBase(res.data.data || []);
-      })
-      .catch((err) => console.log("err>>", err))
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [reload]);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   axios
+  //     .get("/products")
+  //     .then((res) => {
+  //       setBase(res.data.data || []);
+  //     })
+  //     .catch((err) => console.log("err>>", err))
+  //     .finally(() => {
+  //       setLoading(false);
+  //     });
+  // }, [reload]);
 
   return (
     <div className={s.Container}>
@@ -72,9 +69,6 @@ const Carusel = () => {
           })}
         </Swiper>
       </div>
-
-
-      
     </div>
   );
 };

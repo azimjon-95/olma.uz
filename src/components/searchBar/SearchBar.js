@@ -201,32 +201,16 @@ const SearchBar = () => {
 
             {auth ? (
               <>
-                <div
+                <NavLink
                   className="Menu_Box"
                   onClick={() => {
                     setOpenModal(true);
                   }}
+                  to="/admin"
                 >
                   <FiUserCheck />
                   <p>Admin</p>
-                  <div className={`Menu ${openModal ? "Show" : ""}`}>
-                    <div className="Menu__box">
-                      <NavLink to="/myProfile" className="Menu_item">
-                        My profile
-                      </NavLink>
-                      <span className="Menu_item">My Properties</span>
-                      <NavLink to="/admin" className="Menu_item">
-                        Admin panel
-                      </NavLink>
-                      <span
-                        onClick={() => dispatch({ type: "LOG_OUT" })}
-                        className="Menu_item"
-                      >
-                        Log out
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                </NavLink>
                 {openModal && (
                   <div
                     className="Open_close"

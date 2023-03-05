@@ -7,7 +7,7 @@ import Favorites from "../router/favorite/Favorites";
 import { useSelector } from "react-redux";
 import SignIn from "../components/signIn/SignIn";
 import Footer from "../components/footer/Footer";
-import MyProfile from "../router/myProfile/MyProfile";
+
 import SearchBar from "../components/searchBar/SearchBar";
 import BackBtn from "../components/ScrollBackToTop/Scroll";
 import Admin from "../router/admin/Admin";
@@ -28,7 +28,6 @@ function App() {
         <Route path="/admin/*" element={<Admin />} />
 
         <Route path="/cart" element={<Cart />} />
-        <Route path="/myProfile" element={<MyProfile />} />
 
         <Route path="/favorites" element={<Favorites />} />
       </Routes>

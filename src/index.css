@@ -21,6 +21,7 @@ code {
 }
 :root {
   --bg-dark: #39ff14;
+  /* --bg-dark: #232623; */
   --bg-light: #f7f7f7;
   --color: #39ff14;
   --border: 1px solid #39ff14;

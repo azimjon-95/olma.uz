@@ -1,5 +1,5 @@
 import React from "react";
-import CreateAdmins from "../../../components/create-admins/CreateAdmins";
+import CreateAdmins from "../create-admins/CreateAdmins";
 import ReadAdmins from "../../../components/read-admins/ReadAdmins";
 import "./ManageAdmin.css";
 

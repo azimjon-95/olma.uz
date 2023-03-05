@@ -1,114 +1,121 @@
-.big__sidebar{
-    width: 70px;
-    height: 100vh;
-    color: rgb(255, 255, 255);
-    background-color: var(--bg-dark);
-    transition: .3s ease-in;
-    position: fixed;
-    left: 0;
-    z-index: 3;
-    top: 0;
-    overflow: hidden;
-    border-radius: 0 10px 10px 0;
+.big__sidebar {
+  width: 70px;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  background-color: rgb(70, 70, 70);
+  transition: 0.3s ease-in;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: 0 10px 10px 0;
 }
-.big__sidebar.sidebar_show{
-    width: 300px;
-}
-
-.small__sidebar .smallSidebar__icons{
-    font-size: 49px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.small__sidebar .smallSidebar__icons:hover{
-    background-color: #eee3;
-}
-.sideBarIcons__container{
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items:center;
-}
-.sidebar__shadow{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #eee9;
-    z-index: 11;
-
-}
-.bigSidebar__box{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid gray;
-    position: relative;
-    padding: 0 20px;
-}
-.bigSidebar__box svg{
-    font-size: 28px;
-    margin-right: 15px;
+.big__sidebar.sidebar_show {
+  width: 300px;
 }
 
-.bigSidebar__categories{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 0 20px;
+.small__sidebar .smallSidebar__icons {
+  font-size: 49px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.categories_title{
-    font-weight: 400;
-    font-size: 19px;
-    margin-left: 5px;
-    
-    white-space: nowrap;
+.small__sidebar .smallSidebar__icons:hover {
+  background-color: #eee3;
 }
-.categories_icon{
-    margin-left: 20px;
-    position: absolute;
-    cursor: pointer;
-    right: 5px;
+.sideBarIcons__container {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: center;
 }
-.icon_show{
-    display: none;
+.sidebar__shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #eee9;
+  z-index: 11;
 }
-.title_show{
-    display: none;
+.bigSidebar__box {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  position: relative;
+  padding: 0 20px;
 }
-.bigSidebar__categories:hover{
-    background-color: #eee3;
+.bigSidebar__box svg {
+  font-size: 28px;
+  margin-right: 15px;
+}
 
+.bigSidebar__categories {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 20px;
+}
+.categories_title {
+  font-weight: 400;
+  font-size: 19px;
+  margin-left: 5px;
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+}
+.categories_icon {
+  margin-left: 20px;
+  position: absolute;
+  color: rgb(255, 255, 255);
+
+  cursor: pointer;
+  right: 5px;
 }
 
-.bigSidebar__categories svg{
-    font-size: 28px;
-    margin-right: 15px;
+.menu_icon {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
-.close__sidebar{
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    padding: 0 10px;
+
+.icon_show {
+  display: none;
 }
-.close__sidebar svg{
-    font-size: 24px;
-    color: #eee;
-    cursor: pointer;
+.title_show {
+  display: none;
+}
+.bigSidebar__categories:hover {
+  background-color: #eee3;
+}
+
+.bigSidebar__categories svg {
+  font-size: 28px;
+  margin-right: 15px;
+}
+.close__sidebar {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding: 0 10px;
+}
+.close__sidebar svg {
+  font-size: 24px;
+  color: #eee;
+  cursor: pointer;
 }
 
 .sidebar_out {
-    position: fixed;
-    width: calc(100% - 300px);
-    height: 100vh;
-    top: 0;
-    right: 0;
-  }
+  position: fixed;
+  width: calc(100% - 300px);
+  height: 100vh;
+  top: 0;
+  right: 0;
+}

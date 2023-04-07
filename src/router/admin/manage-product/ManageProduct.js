@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
-import p from "./style.module.css";
+import p from "./style.css";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { addCart } from "../../../hooks/useCart";
 import { addHeart } from "../../../hooks/useFavorite";
 import NoImg from "../../../assets/noImg.jpg";
 import axios from "../../../api";
-import { BsCart2 } from "react-icons/bs";
+import { RiDeleteBinLine } from "react-icons/ri";
 import { AiFillHeart } from "react-icons/ai";
 import { BiHeart } from "react-icons/bi";
+import { GrUpdate } from "react-icons/gr";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ManageProduct() {
   const [base, setBase] = useState([]);
@@ -16,6 +19,7 @@ function ManageProduct() {
   const reload = useSelector((s) => s.reload);
   const dispatch = useDispatch();
   const cart = useSelector((s) => s.reduxCart);
+  const [deletPro, setDeletPro] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -35,15 +39,18 @@ function ManageProduct() {
     return addCart(pro, cart, dispatch);
   };
 
-  const addToFavorites = (item) => {
-    return addHeart(item, dispatch);
+  //_____________Delete products_____________________
+  const postDelete = (_id) => {
+    axios.delete(`/products/${_id}`).then((res) => {
+      console.log(res);
+      dispatch({ type: "RELOAD" });
+      toast("Malumot o'chirildi");
+    });
   };
-  const [fly, setFly] = useState(false);
-
   return (
-    <div className={p.product_container}>
+    <div className="product_container">
       {base?.map((item, inx) => (
-        <div key={inx} className={p.product_item}>
+        <div key={inx} className="product_item">
           {/* <span className={p.pro_heart}>
           {heart.some((i) => i === item._id) ? (
             <AiFillHeart
@@ -54,30 +61,43 @@ function ManageProduct() {
             <BiHeart onClick={() => addToFavorites(item)} />
           )}
         </span> */}
-          <NavLink className={p.NavLink} to={`/product/${item?._id}`}>
-            <img className={p.pro_img} src={item.img || NoImg} alt="" />
+          <NavLink className="NavLink" to={`/product/${item?._id}`}>
+            <img className="pro_img" src={item.img || NoImg} alt="" />
           </NavLink>
-          <p className={p.pro_title}>{item.item}</p>
+          <p className="pro_title">{item.item}</p>
 
-          <p className={p.pro_price}>{item.price.brm()} so'm</p>
-          <p className={p.pro_month}>
+          <p className="pro_price">{item.price.brm()} so'm</p>
+          <p className="pro_month">
             {Math.floor((item?.price / 10) * 1.1).brm()}
           </p>
 
           <div style={{ width: "100%", display: "flex" }}>
-            <button
-              onClick={() => {
-                addToCart(item);
-                setFly(item?.img);
-              }}
-              className={p.pro_addCart}
-            >
-              <BsCart2 />
+            <button onClick={() => setDeletPro(true)} className="pro_addCart">
+              <RiDeleteBinLine />
             </button>
-            <button className={p.pro_money}>Muddatli to'lov</button>
+
+            {deletPro && (
+              <div
+                className="delete__shadow"
+                onClick={() => setDeletPro(false)}
+              ></div>
+            )}
+            <div className={` DeletePro ${deletPro ? "DelShow" : ""}`}>
+              <p>You are really sure. Delete, {item.item}?</p>
+              <span>
+                <button onClick={() => postDelete(item._id)}>Yes</button>
+
+                <button onClick={() => setDeletPro(false)}>No</button>
+              </span>
+            </div>
+            <button className="pro_money">
+              <GrUpdate />
+              O'zgartirish
+            </button>
           </div>
         </div>
       ))}
+      <ToastContainer />
     </div>
   );
 }

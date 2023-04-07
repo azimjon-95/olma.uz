@@ -62,15 +62,8 @@ function Properties({ base }) {
                     <BiHeart onClick={() => addToFavorites(item)} />
                   )}
                 </span> */}
-              <NavLink
-                style={{
-                  backgroundImage: `url(${item.img})`,
-                  backgroundPosition: "center",
-                }}
-                className={p.NavLink}
-                to={`/product/${item?._id}`}
-              >
-                <img className={p.pro_img} src={item.img || NoImg} alt="" />
+              <NavLink className={p.NavLink} to={`/product/${item?._id}`}>
+                <img className={p.pro_img} src={item.img[0] || NoImg} alt="" />
               </NavLink>
               <p className={p.pro_title}>{item.item}</p>
 
